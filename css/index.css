@@ -1,0 +1,81 @@
+    /* .anchor {
+    width: 150px;
+    height: 50px;
+    background-color:black;
+    transform: translate(340%, 500%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color:whitesmoke;
+    border-radius: 100px;
+    font-family: verdana;
+    box-shadow: 5px 5px 10px bisque;
+   
+} */
+
+.anchor{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: orange;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    
+}
+
+.anchor:hover{
+    opacity: 1;
+    transform: translate(-4px);
+}
+
+
+
+.anchor::before{
+    font-size: 22px;
+    font-weight: bold;
+}
+        
+           @media only screen and (max-width: 300px) {
+    
+     body{
+        justify-content: center !important;
+        display: block !important;
+        align-items: center !important;
+     }
+     
+}
+/* act as a professional studio photographer, make this image to be a professional portfolio image for a web developer */
+    
+
+    .about{
+          box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    }
+
+
+.html{
+width: 100px;
+height: 80px;
+background: red;
+}
+
+  .parent{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .child{
+            justify-content: space-between;
+            display: flex;
+        }
