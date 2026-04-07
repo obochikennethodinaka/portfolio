@@ -783,7 +783,7 @@
                 <h2 class="section-title reveal reveal-delay-1">Building Digital<br><em>Experiences</em></h2>
                 <div class="section-line reveal reveal-delay-1"></div>
                 <p class="reveal reveal-delay-2">
-                    I am a <strong>Full-Stack Web Developer & Constructive Article Writer</strong> with a passion for building modern, user-focused digital experiences. My expertise spans both front-end and back-end development.
+                    I am a <strong>Full-Stack Web Developer & Freelance Article Writer</strong> with a passion for building modern, user-focused digital experiences. My expertise spans both front-end and back-end development.
                 </p>
                 <p class="reveal reveal-delay-2">
                     I'm dedicated to writing clean, maintainable code and following best practices in UI/UX, database design, and performance optimization. My goal is to transform ideas into high-performing products that solve real-world problems.
@@ -832,13 +832,13 @@
                     <div class="skill-card"><i class="fa fa-mobile"></i><div class="skill-name">Bootstrap</div></div>
                     <!-- <div class="skill-card"><i class="fa fa-leaf"></i><div class="skill-name">jQuery</div></div> -->
                 </div>
-                <div class="skill-category-label reveal">Back-End</div>
+                <div class="skill-category-label ">Back-End</div>
                 <div class="skill-grid reveal reveal-delay-1">
                     <div class="skill-card"><i class="fa fa-server"></i><div class="skill-name">PHP</div></div>
                     <div class="skill-card"><i class="fa fa-database"></i><div class="skill-name">MySQL</div></div>
                     <div class="skill-card"><i class="fa fa-globe"></i><div class="skill-name">Node.js</div></div>
                     <div class="skill-card"><i class="fa fa-code-fork"></i><div class="skill-name">Git & GitHub</div></div>
-                    <div class="skill-card"><i class="fa fa-server"></i><div class="skill-name"> Laravel</div></div>
+                    <div class="skill-card"><i class="fa fa-code-fork"></i><div class="skill-name"> Laravel</div></div>
                 </div>
             </div>
         </div>
@@ -921,6 +921,20 @@
                         <div class="project-tag">Real Estate</div>
                         <div class="project-title">Dorrifort Real Estate</div>
                         <a href="https://real-estate-amber-nine-81.vercel.app/" target="_blank" class="project-link">
+                            View Project <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="../images1/contact-card.png" alt="Real Estate">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tag">Contact Card</div>
+                        <div class="project-title">Developer Contact Card</div>
+                        <a href="https://developer-contact-card.vercel.app/" target="_blank" class="project-link">
                             View Project <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -1029,20 +1043,6 @@
         }, 2000);
     });
 
-//         // preloader javascript
-//  window.addEventListener("load", function() {
-//     const preloader = document.getElementById("preloader");
-//     const body = document.body;
-
-//     const delay = 2000;
-
-//     setTimeout(() => {
-//         preloader.classList.add("hidden")
-//         body.classList.remove("preloader-active");
-//         setTimeout(() => preloader, remove(), 500);
-//     }, delay);
-//  })
-
     // ── Navbar scroll style ──
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
@@ -1081,8 +1081,18 @@
             this.reset();
         }, 3000);
     });
-</script>
 
+    // ── Close navbar on mobile when a nav link is clicked ──
+    const navMenu = document.getElementById('navMenu');
+    document.querySelectorAll('#navMenu .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            // Only runs on mobile where the toggler is visible
+            if (window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') {
+                bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
